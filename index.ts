@@ -387,6 +387,7 @@ class input{
 			case "checkbox":
 			case "radio":
 			case "select":
+            case "file":
 				this.inputType = inputType;
 				this.label = label;
 				this.style = style;
@@ -400,6 +401,7 @@ class input{
 			switch(this.inputType){
 			case "text":
 			case "password":
+            case "file":
 				div.addClass("form-group");
 				label.addAttribute("for", this.inputName);
 			    label.add(new rawHtml(this.label));
@@ -416,13 +418,13 @@ class input{
 			case "checkbox":
 			case "radio":
 				if(this.style == "inline"){
-				div = new rawHtml('<label class="' + this.inputType + '-inline"><input type="' + this.inputType + '" id="' + this.inputName + '" name="' + this.inputName + '" value="'+ this.other +'">' + this.label + '</label>');
+				var div2 = new rawHtml('<label class="' + this.inputType + '-inline"><input type="' + this.inputType + '" id="' + this.inputName + '" name="' + this.inputName + '" value="'+ this.other +'">' + this.label + '</label>');
 				}
 				else{
 				div.addClass(this.inputType);
                 div.add(new rawHtml('<label class="' + this.inputType + '-inline"><input type="' + this.inputType + '" id="' + this.inputName + '" name="' + this.inputName + '" value="' + this.other +'">' + this.label + '</label>'));
 				}
-				return div.build();
+				return div2.build();
 			case "select":
 				div.addClass("form-group");
 				label.addAttribute("for", this.inputName);

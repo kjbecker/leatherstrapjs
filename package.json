@@ -1,5 +1,5 @@
 { "name" : "leatherstrap"
-, "version" : "0.0.1"
+, "version" : "0.1.1"
 , "description" : "A node library for creating HTML structures as objects using the bootstrap framework."
 , "main" : "index.js"
 , "author" : "Kyle James Becker (kylejamesbecker.com)"
